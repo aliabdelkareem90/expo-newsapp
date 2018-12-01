@@ -18,9 +18,10 @@ const styles = StyleSheet.create({
   },
   textInput: {
     height: 40, 
-    borderColor: 'gray', 
+    borderColor: '#ddd', 
     borderWidth: 1,
     margin: 5,
-    padding: 10
+    padding: 10,
+    borderRadius: 10
   }
 });

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import {Constants} from 'expo'
-import { View } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import Header from '../components/header'   
 import SearchBar from '../components/searchBar'
 import NewsList from '../components/newsList'     
@@ -8,7 +8,7 @@ import NewsList from '../components/newsList'
 export default class main extends Component {
   render() {
     return (
-        <View style={{flex:1, marginTop:Constants.statusBarHeight}}>
+        <View style={styles.container}>
             <Header />
             <SearchBar />
             <NewsList />
@@ -16,3 +16,11 @@ export default class main extends Component {
     )
   }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex:1,
+        marginTop:Constants.statusBarHeight
+    }
+  })
+  
