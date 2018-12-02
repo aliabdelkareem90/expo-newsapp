@@ -2,17 +2,32 @@ import React, { Component } from 'react'
 import { View, TextInput, StyleSheet } from 'react-native'
 
 export default class SearchBar extends Component {
+
+  state = {
+    searchInput: ''
+  }
+
+  onChangeHandler = (val) => {
+    this.setState({
+      searchInput: val
+    })
+  }
+
   render() {
     return (
       <View style={styles.container} >
-        <TextInput style={styles.textInput} placeholder="Search here ..."/>
+        <TextInput 
+          style={styles.textInput}
+          placeholder="Search here ..."
+          value={this.state.searchInput}
+          onChangeText={this.onChangeHandler}/>
       </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
+  searchBarContainer: {
     flex:0.1, 
     backgroundColor: "#fff",
   },
@@ -21,7 +36,7 @@ const styles = StyleSheet.create({
     borderColor: '#ddd', 
     borderWidth: 1,
     margin: 5,
-    padding: 10,
-    borderRadius: 10
+    paddingLeft: 20,
+    borderRadius: 20
   }
 });

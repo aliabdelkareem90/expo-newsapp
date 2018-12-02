@@ -10,7 +10,7 @@ export default class NewsList extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  newsListContainer: {
     flex:1, 
     backgroundColor:"#eee"
   }

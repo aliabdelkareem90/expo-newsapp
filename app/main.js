@@ -8,19 +8,19 @@ import NewsList from '../components/newsList'
 export default class main extends Component {
   render() {
     return (
-        <View style={styles.container}>
-            <Header />
-            <SearchBar />
-            <NewsList />
-        </View>
+      <View style={styles.container}>
+        <Header />
+        <SearchBar />
+        <NewsList />
+      </View>
     )
   }
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex:1,
-        marginTop:Constants.statusBarHeight
-    }
-  })
+  mainContainer: {
+    flex:1,
+    marginTop:Constants.statusBarHeight
+  }
+})
   
