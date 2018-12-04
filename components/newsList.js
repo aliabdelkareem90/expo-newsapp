@@ -1,10 +1,20 @@
 import React, { Component } from 'react'
-import {View, Image, StyleSheet } from 'react-native'
+import {View, StyleSheet, ScrollView} from 'react-native'
+import NewsItem from './newsItem'
 
 export default class NewsList extends Component {
+  
   render() {
+    const {news} = this.props
+    // Mapping all incoming articles and retrun a list of news  
+    const NewsList = news.map((newsItemData, i) => <NewsItem item={newsItemData} key={i}/>)
     return (
-      <View style={styles.container} />
+      // Using ScrollView instead of View to scroll up and down all items
+      <ScrollView style={styles.newsListContainer}>
+      <View>
+        {NewsList}
+      </View>
+      </ScrollView>
     )
   }
 }

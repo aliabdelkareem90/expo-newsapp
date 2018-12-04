@@ -14,23 +14,28 @@ export default class Header extends Component {
 
 const styles = StyleSheet.create({
     headerContainer: {
-        height:60,
-        backgroundColor: "#fff",
+        height:50,
+        backgroundColor: "#6a1b9a",
         flexDirection:"row",
         alignItems: 'center',
         justifyContent: 'space-between',
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 1,
+        shadowRadius: 5,
+        elevation: 5,
     },
     logo: {
         height:45, 
         width:95, 
-        margin:10,
+        margin:4,
         alignSelf: 'flex-start'
     },
     title :{
         fontSize: 16,
-        color: '#6a1b9a',
+        color: '#fff',
         fontWeight: 'bold',
         fontStyle: 'italic',
-        marginRight: 'auto',
+        marginRight: 'auto'
     }
 })
